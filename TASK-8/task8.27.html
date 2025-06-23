@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Language and Country Form</title>
+</head>
+<body>
+  <h2>Select Known Programming Languages:</h2>
+  <form>
+    <label><input type="checkbox" name="language" value="HTML"> HTML</label><br>
+    <label><input type="checkbox" name="language" value="CSS"> CSS</label><br>
+    <label><input type="checkbox" name="language" value="JS"> JavaScript</label><br><br>
+
+    <label for="country">Choose your country:</label>
+    <select id="country" name="country">
+      <option value="">--Select--</option>
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+      <option value="canada">Canada</option>
+      <option value="australia">Australia</option>
+    </select><br><br>
+
+    <label for="comments">Comments or Feedback:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Enter your feedback here..."></textarea><br><br>
+
+    <label for="dob">Select Date:</label>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <label for="rating">Rate our form (1 to 5):</label>
+    <input type="number" id="rating" name="rating" min="1" max="5">
+  </form>
+</body>
+</html>
