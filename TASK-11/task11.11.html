@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      width: 300px;
+      height: 100px;
+      background-color: #90caf9;
+      border: 2px solid #1976d2;
+      margin-bottom: 30px; /* Adds vertical space below the first box */
+      font-family: Arial, sans-serif;
+      color: #0d47a1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Remove margin-bottom for the second box */
+    .box:last-child {
+      margin-bottom: 0;
+      background-color: #a5d6a7;
+      border-color: #388e3c;
+      color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+
+</body>
+</html>

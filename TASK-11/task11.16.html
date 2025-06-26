@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Default behavior: content-box (no universal box-sizing) */
+    .container-default {
+      width: 320px;
+      padding: 20px;
+      border: 5px solid #4caf50;
+      background-color: #c8e6c9;
+      margin-bottom: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Applying border-box universally */
+    * {
+      box-sizing: border-box;
+    }
+
+    .container-border-box {
+      width: 320px;
+      padding: 20px;
+      border: 5px solid #f44336;
+      background-color: #ffcdd2;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-default">
+    <strong>Default box-sizing (content-box):</strong><br>
+    Width = 320px + padding + border → Total width &gt; 320px.<br>
+    This can cause overflow issues.
+  </div>
+
+  <div class="container-border-box">
+    <strong>Universal box-sizing: border-box;</strong><br>
+    Width = 320px including padding and border.<br>
+    Easier to control size and avoid overflow.
+  </div>
+
+</body>
+</html>

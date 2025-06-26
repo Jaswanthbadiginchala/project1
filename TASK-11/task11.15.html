@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      width: 200px;
+      padding: 20px;
+      border: 5px solid #333;
+      margin: 20px;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      background-color: #1976d2;
+      box-sizing: content-box; /* default */
+    }
+
+    .border-box {
+      box-sizing: border-box;
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <strong>content-box</strong><br>
+    Width = 200px + padding + border (actual size &gt; 200px)
+  </div>
+
+  <div class="box border-box">
+    <strong>border-box</strong><br>
+    Width = 200px including padding & border (actual size = 200px)
+  </div>
+
+</body>
+</html>
