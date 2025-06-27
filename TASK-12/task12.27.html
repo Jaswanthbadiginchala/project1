@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #333;
+      color: white;
+      padding: 15px 20px;
+      z-index: 1000;
+      font-size: 18px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .box {
+      height: 300px;
+      background: #ddd;
+      margin-bottom: 20px;
+      border: 1px solid #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Sticky Header (z-index: 1000)
+</header>
+
+<main>
+  <div class="box">Scroll down...</div>
+  <div class="box">More content...</div>
+  <div class="box">Keep going...</div>
+</main>
+
+</body>
+</html>

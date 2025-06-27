@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .tooltip-wrapper {
+      position: relative; /* container for absolute tooltip */
+      display: inline-block;
+      cursor: pointer;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .tooltip-text {
+      display: none;
+      position: absolute;
+      bottom: 125%; /* position above the word */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      font-size: 14px;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .tooltip-wrapper:hover .tooltip-text {
+      display: block;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Tooltip arrow */
+    .tooltip-text::after {
+      content: "";
+      position: absolute;
+      top: 100%; /* bottom of tooltip */
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 6px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  Hover over the 
+  <span class="tooltip-wrapper">
+    word
+    <span class="tooltip-text">This is the tooltip text!</span>
+  </span>
+  to see the tooltip.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      width: 200px;
+      height: 100px;
+      background-color: #eee;
+      padding: 10px;
+      position: relative;
+    }
+
+    .hidden-box {
+      display: none;
+      background-color: lightgreen;
+      padding: 8px;
+      margin-top: 10px;
+    }
+
+    .container:hover .hidden-box {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  Hover over me
+  <div class="hidden-box">Now you see me!</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      width: 600px;
+      margin: 40px auto;
+      font-family: sans-serif;
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow: hidden; /* Clear floats */
+    }
+    .left-box {
+      float: left;
+      width: 100px;
+      height: 100px;
+      background: lightcoral;
+      text-align: center;
+      line-height: 100px;
+      color: white;
+      font-weight: bold;
+    }
+    .right-box {
+      float: right;
+      width: 100px;
+      height: 100px;
+      background: lightseagreen;
+      text-align: center;
+      line-height: 100px;
+      color: white;
+      font-weight: bold;
+    }
+    .center-content {
+      margin: 0 120px; /* Leave space for floated boxes */
+      height: 100px;
+      background: lightgray;
+      line-height: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left-box">Left</div>
+  <div class="right-box">Right</div>
+  <div class="center-content">Center Content</div>
+</div>
+
+</body>
+</html>

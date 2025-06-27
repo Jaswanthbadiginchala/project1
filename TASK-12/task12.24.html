@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      width: 800px;
+      margin: 20px auto;
+      font-family: sans-serif;
+      overflow: hidden; /* Clear floats */
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .sidebar {
+      float: left;
+      width: 250px;
+      background-color: #f4f4f4;
+      padding: 15px;
+      box-sizing: border-box;
+      border-right: 1px solid #ddd;
+      height: 400px; /* for demo */
+    }
+
+    .content {
+      float: left;
+      width: 530px; /* container width - sidebar width - padding/margins */
+      padding: 15px;
+      box-sizing: border-box;
+      height: 400px; /* for demo */
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="sidebar">
+    <h3>Sidebar</h3>
+    <p>This is the sidebar area.</p>
+  </div>
+  <div class="content">
+    <h2>Main Content</h2>
+    <p>This is the main content area next to the sidebar.</p>
+  </div>
+</div>
+
+</body>
+</html>

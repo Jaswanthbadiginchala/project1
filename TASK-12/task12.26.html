@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      color: white;
+      font-family: sans-serif;
+      font-weight: bold;
+      text-align: center;
+      line-height: 150px;
+    }
+
+    .box1 {
+      background-color: steelblue;
+      top: 50px;
+      left: 50px;
+      z-index: 1;
+    }
+
+    .box2 {
+      background-color: tomato;
+      top: 100px;
+      left: 100px;
+      z-index: 2; /* appears on top */
+    }
+  </style>
+</head>
+<body>
+
+<div class="box box1">Box 1</div>
+<div class="box box2">Box 2</div>
+
+</body>
+</html>
