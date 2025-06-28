@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tasty Bites</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fffbe7;
+    }
+    header {
+      background-image: url('https://i.imgur.com/o5uMfKo.jpg');
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      font-family: 'Pacifico', cursive;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    .main {
+      display: flex;
+      padding: 20px;
+    }
+    .menu {
+      width: 30%;
+      float: left;
+      padding: 10px;
+      background: #fff3cd;
+    }
+    .menu h2 {
+      margin-bottom: 10px;
+    }
+    .menu ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    .content {
+      width: 70%;
+      float: right;
+      padding: 10px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .gallery img {
+      width: 30%;
+      height: auto;
+      border-radius: 8px;
+    }
+    form {
+      background: #f8f9fa;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tasty Bites</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main">
+    <div class="menu">
+      <h2>Our Menu</h2>
+      <ul>
+        <li>Veg Biryani</li>
+        <li>Paneer Butter Masala</li>
+        <li>Chicken 65</li>
+        <li>Mutton Curry</li>
+        <li>Gulab Jamun</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Food Gallery</h2>
+      <div class="gallery">
+        <img src="https://i.imgur.com/1iG4qjF.jpg" alt="Food 1">
+        <img src="https://i.imgur.com/bYr3Wzy.jpg" alt="Food 2">
+        <img src="https://i.imgur.com/nKHvDxD.jpg" alt="Food 3">
+      </div>
+
+      <h2>Feedback Form</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Contact Number" required>
+        <select required>
+          <option value="">Rate Us</option>
+          <option>★☆☆☆☆</option>
+          <option>★★☆☆☆</option>
+          <option>★★★☆☆</option>
+          <option>★★★★☆</option>
+          <option>★★★★★</option>
+        </select>
+        <textarea placeholder="Your Suggestions..." rows="4"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Tasty Bites | Designed with ❤
+  </footer>
+
+</body>
+</html>
