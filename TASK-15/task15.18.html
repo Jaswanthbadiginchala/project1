@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: column-reverse; /* Stack items vertically, reversed */
+      flex-wrap: wrap;                /* Allow wrapping horizontally */
+      height: 300px;                  /* Fixed height to enable wrapping */
+      width: 200px;
+      border: 2px solid #444;
+      gap: 10px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      overflow: auto;
+      background: #f5f5f5;
+    }
+
+    .flex-item {
+      background: #007acc;
+      color: white;
+      padding: 15px;
+      border-radius: 6px;
+      flex: 0 0 80px; /* Fixed width, no grow/shrink */
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+    <div class="flex-item">6</div>
+    <div class="flex-item">7</div>
+    <div class="flex-item">8</div>
+  </div>
+
+</body>
+</html>

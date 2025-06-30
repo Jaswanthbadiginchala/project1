@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      display: flex;
+      align-items: center;  /* Center all items vertically by default */
+      gap: 20px;
+      height: 150px;
+      background: #f0f0f0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .item {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+      flex: 1;
+      text-align: center;
+    }
+
+    .top-align {
+      align-self: flex-start;  /* Override: align this item to the top */
+      background: #e91e63;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="item">Centered</div>
+    <div class="item top-align">Top Aligned</div>
+    <div class="item">Centered</div>
+  </div>
+
+</body>
+</html>

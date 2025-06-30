@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    .item {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+      flex-grow: 0; /* Default: no grow */
+      flex-basis: 100px; /* Base width */
+    }
+
+    .item.expand {
+      flex-grow: 1; /* This item expands to fill leftover space */
+      background: #4caf50;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="item">Fixed 1</div>
+    <div class="item expand">Expanding Item</div>
+    <div class="item">Fixed 2</div>
+  </div>
+
+</body>
+</html>

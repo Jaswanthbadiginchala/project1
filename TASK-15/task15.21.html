@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      display: flex;
+      gap: 10px;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    .column {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+      flex-grow: 1;      /* Default grow */
+      flex-basis: 0;     /* Allows flex-grow to control width */
+    }
+
+    .middle {
+      flex-grow: 2;      /* Twice as wide as others */
+      background: #4caf50;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="column">Left</div>
+    <div class="column middle">Middle (2x width)</div>
+    <div class="column">Right</div>
+  </div>
+
+</body>
+</html>

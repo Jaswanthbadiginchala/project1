@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+    }
+
+    .pricing-section {
+      display: flex;
+      justify-content: space-evenly;  /* Equal space between and around cards */
+      align-items: flex-start;        /* Align cards to the top */
+      padding: 40px 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .plan {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      width: 280px;
+      text-align: center;
+    }
+
+    .plan h2 {
+      margin-top: 0;
+      color: #007acc;
+    }
+
+    .price {
+      font-size: 28px;
+      margin: 15px 0;
+      color: #333;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+    }
+
+    .features li {
+      margin: 8px 0;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #005f99;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="pricing-section">
+    <div class="plan">
+      <h2>Basic</h2>
+      <div class="price">$9/mo</div>
+      <ul class="features">
+        <li>1 Project</li>
+        <li>5 GB Storage</li>
+        <li>Email Support</li>
+      </ul>
+      <a class="btn" href="#">Choose Plan</a>
+    </div>
+
+    <div class="plan">
+      <h2>Pro</h2>
+      <div class="price">$29/mo</div>
+      <ul class="features">
+        <li>10 Projects</li>
+        <li>50 GB Storage</li>
+        <li>Priority Support</li>
+      </ul>
+      <a class="btn" href="#">Choose Plan</a>
+    </div>
+
+    <div class="plan">
+      <h2>Enterprise</h2>
+      <div class="price">$99/mo</div>
+      <ul class="features">
+        <li>Unlimited Projects</li>
+        <li>1 TB Storage</li>
+        <li>24/7 Support</li>
+      </ul>
+      <a class="btn" href="#">Choose Plan</a>
+    </div>
+  </section>
+
+</body>
+</html>
+

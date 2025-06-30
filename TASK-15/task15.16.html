@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;       /* Enable wrapping */
+      gap: 10px;
+      padding: 10px;
+      background: #eee;
+      font-family: Arial, sans-serif;
+    }
+
+    .flex-item {
+      background: #007acc;
+      color: white;
+      flex: 1 1 100px;       /* Grow, shrink, base width */
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+      min-width: 100px;      /* Minimum width to help wrapping */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+    <div class="flex-item">6</div>
+    <div class="flex-item">7</div>
+    <div class="flex-item">8</div>
+    <div class="flex-item">9</div>
+    <div class="flex-item">10</div>
+  </div>
+
+</body>
+</html>

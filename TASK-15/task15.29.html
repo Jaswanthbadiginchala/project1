@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 30px;
+      justify-content: center;
+      flex-wrap: wrap; /* Optional: wrap if needed on medium screens */
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #007acc;
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="card">
+      <h3>Card 1</h3>
+      <p>This is the first card with some content.</p>
+    </div>
+    <div class="card">
+      <h3>Card 2</h3>
+      <p>This is the second card with some more content.</p>
+    </div>
+    <div class="card">
+      <h3>Card 3</h3>
+      <p>This is the third card with even more content.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+

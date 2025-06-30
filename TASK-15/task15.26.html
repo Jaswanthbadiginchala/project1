@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .parent {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background: #ddd;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .nested {
+      display: flex;
+      flex-direction: column; /* Stack child items vertically */
+      gap: 10px;
+      background: #4caf50;
+    }
+
+    .nested div {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="parent">
+    <div class="box">Box 1</div>
+    
+    <div class="box nested">
+      <div>Nested 1</div>
+      <div>Nested 2</div>
+      <div>Nested 3</div>
+    </div>
+    
+    <div class="box">Box 3</div>
+  </div>
+
+</body>
+</html>

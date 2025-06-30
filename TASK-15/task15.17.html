@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: nowrap;    /* No wrapping, all items in one line */
+      gap: 10px;
+      padding: 10px;
+      background: #eee;
+      font-family: Arial, sans-serif;
+      overflow-x: auto;     /* Allows horizontal scroll if overflow */
+      border: 1px solid #ccc;
+      white-space: nowrap;  /* Prevent line breaks inside flex items */
+    }
+
+    .flex-item {
+      background: #e91e63;
+      color: white;
+      flex: 0 0 150px;      /* Fixed width, no grow or shrink */
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+    <div class="flex-item">6</div>
+    <div class="flex-item">7</div>
+    <div class="flex-item">8</div>
+    <div class="flex-item">9</div>
+    <div class="flex-item">10</div>
+  </div>
+
+</body>
+</html>

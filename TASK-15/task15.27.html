@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .layout {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: #2c3e50;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .menu-item {
+      margin-bottom: 20px;
+    }
+
+    .submenu {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-left: 15px;
+      font-size: 14px;
+      color: #bdc3c7;
+    }
+
+    .content {
+      flex: 1;
+      background: #ecf0f1;
+      padding: 30px;
+    }
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="menu-item">
+        Dashboard
+        <div class="submenu">
+          <div>Overview</div>
+          <div>Reports</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        Settings
+        <div class="submenu">
+          <div>Profile</div>
+          <div>Security</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="title">Main Content</div>
+      <p>This area displays the main page content. The sidebar remains fixed on the left with stacked menu items and submenus.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .cards {
+      display: flex;
+      gap: 20px;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .card {
+      flex: 1;
+      height: 200px;
+      border: 2px solid #333;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .top-align {
+      justify-content: flex-start; /* Content at top */
+    }
+
+    .bottom-align {
+      justify-content: flex-end;   /* Content at bottom */
+    }
+
+    .content {
+      background: #4caf50;
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cards">
+    <div class="card top-align">
+      <div class="content">Top Aligned Content</div>
+    </div>
+
+    <div class="card bottom-align">
+      <div class="content">Bottom Aligned Content</div>
+    </div>
+  </div>
+
+</body>
+</html>

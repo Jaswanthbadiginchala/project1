@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .item {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+      flex: 1;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Rearrange order */
+    .item:nth-child(1) {
+      order: 2; /* originally first, now second */
+    }
+    .item:nth-child(2) {
+      order: 1; /* originally second, now first */
+    }
+    .item:nth-child(3) {
+      order: 3; /* unchanged */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2 (Now 1st)</div>
+    <div class="item">Item 3</div>
+  </div>
+
+</body>
+</html>

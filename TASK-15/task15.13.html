@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      display: flex;
+      height: 200px;
+      border: 2px solid #333;
+      font-family: Arial, sans-serif;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .left {
+      flex: 1;
+      background: #4caf50;
+      color: white;
+      display: flex;
+      align-items: center; /* Vertically center content */
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .right {
+      flex: 1;
+      background: #2196f3;
+      color: white;
+      padding: 10px;
+      /* Default align-items: stretch, so content starts at top */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">Vertically Centered</div>
+    <div class="right">
+      <p>Aligned to Top</p>
+      <p>More content here...</p>
+    </div>
+  </div>
+
+</body>
+</html>

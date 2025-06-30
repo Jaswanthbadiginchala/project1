@@ -1,0 +1,33 @@
+Here’s an updated version explicitly setting flex-direction: row:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: row; /* Default, but explicitly set */
+      gap: 10px;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+
+    .flex-container > div {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </div>
+
+</body>
+</html>
