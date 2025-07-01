@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 150px);
+      gap: 15px;
+      padding: 20px;
+      align-items: center; /* Center content vertically */
+      height: 150px; /* Fixed height so vertical centering is visible */
+      background: #f0f0f0;
+    }
+    .item {
+      background: #ff5722;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      height: 80px; /* smaller height than grid row for effect */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid">
+    <div class="item">Box 1</div>
+    <div class="item">Box 2</div>
+    <div class="item">Box 3</div>
+  </div>
+
+</body>
+</html>

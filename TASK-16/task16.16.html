@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 120px);
+      gap: 15px;
+      padding: 20px;
+      justify-items: center; /* Center content horizontally */
+    }
+    .item {
+      background: #673ab7;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 100%; /* So that the box fills the grid cell width */
+      text-align: left; /* Text aligns left, but content box is centered */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid">
+    <div class="item">Left aligned text</div>
+    <div class="item">Centered box</div>
+    <div class="item">More content</div>
+  </div>
+
+</body>
+</html>
+

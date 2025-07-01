@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(2, 100px);
+      gap: 10px;
+      width: 400px;
+      height: 350px;
+      border: 2px solid #222;
+      background: #e1f5fe;
+
+      /* Change these to see different alignment behaviors */
+      justify-content: start;  /* Try: start | end | stretch */
+      align-content: stretch;  /* Try: start | end | stretch */
+    }
+    .box {
+      background: #0288d1;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+</body>
+</html>
+

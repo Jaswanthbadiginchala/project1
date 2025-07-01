@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3x3 Grid with Equal Columns</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+      grid-template-rows: 100px 100px 100px; /* Fixed-height rows */
+      gap: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      max-width: 600px; /* Optional: to keep it contained */
+      margin: auto;
+    }
+
+    .box {
+      background-color: #03a9f4;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+  </div>
+
+</body>
+</html>
+

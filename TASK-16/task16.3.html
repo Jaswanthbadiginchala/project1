@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid with Fixed Rows and Columns</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 200px 200px;   /* Two columns */
+      grid-template-rows: 100px 100px 100px; /* Three rows */
+      gap: 10px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .box {
+      background-color: #ff5722;
+      color: white;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box">Box 5</div>
+    <div class="box">Box 6</div>
+  </div>
+
+</body>
+</html>

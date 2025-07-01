@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .magazine {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 200px 200px;
+      grid-template-areas:
+        "image text"
+        "image content";
+      gap: 20px;
+      padding: 20px;
+      background: #fafafa;
+      position: relative;
+    }
+
+    .image {
+      grid-area: image;
+      background: url('https://via.placeholder.com/300x400') no-repeat center/cover;
+      border-radius: 10px;
+      z-index: 2;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .text {
+      grid-area: text;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+
+    .content {
+      grid-area: content;
+      background: #e0e0e0;
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="magazine">
+    <div class="image"></div>
+    <div class="text">
+      <h2>Feature Title</h2>
+      <p>Introductory lead paragraph that the image overlaps slightly for a stylish effect.</p>
+    </div>
+    <div class="content">
+      <h3>Main Article</h3>
+      <p>This area contains the full article or supporting content. Layout uses grid-area and z-index for visual layering.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+

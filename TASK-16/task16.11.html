@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 20px;
+    }
+    .item {
+      background: #673ab7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+    }
+    .span-2 {
+      grid-column: span 2;
+      background: #ff5722;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item span-2">Item 2 (span 2 cols)</div>
+    <div class="item">Item 3</div>
+  </div>
+
+</body>
+</html>

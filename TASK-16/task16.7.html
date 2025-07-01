@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar + Main Layout</title>
+  <style>
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr; /* Sidebar = 1 part, Main = 2 parts */
+      gap: 20px;
+      padding: 20px;
+      height: 300px;
+      background-color: #eee;
+    }
+
+    .sidebar {
+      background-color: #3f51b5;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .main {
+      background-color: #4caf50;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layout">
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>This is the sidebar content.</p>
+    </div>
+    <div class="main">
+      <h2>Main Content</h2>
+      <p>This is the main content area. It takes up twice the space of the sidebar.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+
