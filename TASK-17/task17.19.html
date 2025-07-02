@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .product-card {
+      position: relative;
+      width: 250px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-family: sans-serif;
+      margin: 40px;
+    }
+
+    .ribbon {
+      position: absolute;
+      top: 12px;
+      left: -40px;
+      background: #e74c3c;
+      color: white;
+      text-align: center;
+      padding: 6px 60px;
+      font-weight: bold;
+      font-size: 14px;
+      transform: rotate(-45deg);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .ribbon::before,
+    .ribbon::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      border: 10px solid transparent;
+      border-top-color: #c0392b;
+    }
+
+    .ribbon::before {
+      left: 0;
+      border-left: none;
+    }
+
+    .ribbon::after {
+      right: 0;
+      border-right: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-card">
+    <div class="ribbon">SALE</div>
+    <h2>Product Name</h2>
+    <p>Awesome product description goes here.</p>
+  </div>
+
+</body>
+</html>

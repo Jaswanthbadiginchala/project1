@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    section {
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    section::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #888;
+      margin-top: 20px;
+    }
+
+    /* Remove separator on last section */
+    section:last-child::after {
+      content: none;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Section A</h2>
+    <p>Content of section A.</p>
+  </section>
+
+  <section>
+    <h2>Section B</h2>
+    <p>Content of section B.</p>
+  </section>
+
+  <section>
+    <h2>Section C</h2>
+    <p>Content of section C.</p>
+  </section>
+
+</body>
+</html>

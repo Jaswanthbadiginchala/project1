@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .star-item::before {
+      content: "★ ";
+      color: gray;
+      transition: color 0.3s;
+    }
+
+    .star-item:hover::before {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="star-item">Hover over me!</p>
+  <p class="star-item">Another star item</p>
+
+</body>
+</html>

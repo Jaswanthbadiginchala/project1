@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    section {
+      position: relative;
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+
+    section::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #ccc;
+      margin-top: 15px;
+    }
+
+    /* Optional: Remove separator after the last section */
+    section:last-child::after {
+      content: none;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Section One</h2>
+    <p>Content for the first section.</p>
+  </section>
+
+  <section>
+    <h2>Section Two</h2>
+    <p>Content for the second section.</p>
+  </section>
+
+  <section>
+    <h2>Section Three</h2>
+    <p>Content for the third section.</p>
+  </section>
+
+</body>
+</html>
