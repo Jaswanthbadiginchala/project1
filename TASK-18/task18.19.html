@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shake Effect</title>
+  <style>
+    .shake {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #c0392b;
+      color: white;
+      font-family: sans-serif;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      animation: shake 0.5s ease-in-out;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="shake">Shake Me</div>
+
+</body>
+</html>

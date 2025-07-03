@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Slide Text Down</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      background: #f0f0f0;
+    }
+
+    .slide-text {
+      position: relative;
+      top: -100px;
+      animation: slideDown 1s forwards ease-out;
+      font-size: 24px;
+      color: #34495e;
+    }
+
+    @keyframes slideDown {
+      to {
+        top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide-text">Welcome to the Page!</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marquee Left to Right</title>
+  <style>
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      background: #ecf0f1;
+      padding: 12px 0;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 20px;
+      font-family: sans-serif;
+      color: #2c3e50;
+      animation: slideRight 8s linear infinite;
+    }
+
+    @keyframes slideRight {
+      0%   { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marquee-container">
+    <div class="marquee-text">🚀 Smooth scrolling marquee from left to right!</div>
+  </div>
+
+</body>
+</html>

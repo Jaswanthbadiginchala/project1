@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bouncing Ball</title>
+  <style>
+    .ball {
+      width: 50px;
+      height: 50px;
+      background: #3498db;
+      border-radius: 50%;
+      position: relative;
+      animation: bounce 1s ease-in-out infinite;
+      margin: 100px auto;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        top: 0;
+        animation-timing-function: ease-in;
+      }
+      50% {
+        top: 100px;
+        animation-timing-function: ease-out;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ball"></div>
+
+</body>
+</html>

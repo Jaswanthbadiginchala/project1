@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hover Triggered Animation</title>
+  <style>
+    .hover-animate {
+      width: 150px;
+      height: 60px;
+      background: #2ecc71;
+      color: white;
+      font-family: sans-serif;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hover-animate:hover {
+      animation: bounceScale 0.6s ease forwards;
+    }
+
+    @keyframes bounceScale {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hover-animate">Hover Me</div>
+
+</body>
+</html>

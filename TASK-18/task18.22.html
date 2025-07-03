@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Delayed Animation</title>
+  <style>
+    .delayed-box {
+      width: 100px;
+      height: 100px;
+      background: #2980b9;
+      margin: 80px auto;
+      border-radius: 12px;
+      animation: pulse 1.5s ease-in-out infinite;
+      animation-delay: 2s;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="delayed-box"></div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Progress Bar Animation</title>
+  <style>
+    .progress-container {
+      width: 300px;
+      height: 20px;
+      background: #ecf0f1;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 80px auto;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0;
+      background: #27ae60;
+      animation: fill 3s ease-out forwards;
+    }
+
+    @keyframes fill {
+      to { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-fill"></div>
+  </div>
+
+</body>
+</html>
