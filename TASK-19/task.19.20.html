@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: row; /* Default: row */
+      gap: 20px;
+      padding: 20px;
+      background: #eee;
+      max-width: 800px;
+      margin: 40px auto;
+      font-family: sans-serif;
+    }
+
+    .box {
+      flex: 1;
+      background: #3498db;
+      color: white;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Change to column below 768px */
+    @media (max-width: 767px) {
+      .flex-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .responsive-section {
+      height: 200px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      transition: background-color 0.3s;
+    }
+
+    /* Mobile: up to 599px */
+    @media (max-width: 599px) {
+      .responsive-section {
+        background-color: #3498db; /* Blue */
+      }
+    }
+
+    /* Tablet: 600px to 1023px */
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .responsive-section {
+        background-color: #e67e22; /* Orange */
+      }
+    }
+
+    /* Desktop: 1024px and up */
+    @media (min-width: 1024px) {
+      .responsive-section {
+        background-color: #27ae60; /* Green */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="responsive-section">
+    Resize the window to see the background color change.
+  </section>
+
+</body>
+</html>

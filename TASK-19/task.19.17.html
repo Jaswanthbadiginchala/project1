@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card-container {
+      display: flex;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      font-family: sans-serif;
+    }
+
+    .card {
+      background: #3498db;
+      color: white;
+      padding: 30px;
+      border-radius: 8px;
+      flex: 1; /* Equal width cards */
+      text-align: center;
+      font-size: 1.2rem;
+      box-sizing: border-box;
+    }
+
+    /* Switch to column layout below 992px */
+    @media (max-width: 991px) {
+      .card-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="card">Card 1 Content</div>
+    <div class="card">Card 2 Content</div>
+    <div class="card">Card 3 Content</div>
+  </div>
+
+</body>
+</html>

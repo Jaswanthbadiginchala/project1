@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .btn {
+      font-size: 1em;         /* Base font size */
+      padding: 1em 2em;       /* Vertical: 1em, Horizontal: 2em */
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    .large-text {
+      font-size: 1.5em;
+    }
+
+    .small-text {
+      font-size: 0.75em;
+    }
+
+    body {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn small-text">Small Button</button>
+  <button class="btn">Normal Button</button>
+  <button class="btn large-text">Large Button</button>
+
+</body>
+</html>

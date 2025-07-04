@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --container-width: 90%;
+      --side-padding: 1.5rem;
+    }
+
+    .wrapper {
+      max-width: var(--container-width);
+      padding: 0 var(--side-padding);
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      font-family: sans-serif;
+    }
+
+    .box {
+      flex: 1;
+      background: #3498db;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .wrapper {
+        flex-direction: column;
+        --side-padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="box">Left</div>
+    <div class="box">Right</div>
+  </div>
+
+</body>
+</html>

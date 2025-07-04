@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --gap: 40px;
+    }
+
+    .box {
+      width: calc(100% - var(--gap));
+      background: #3498db;
+      color: white;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    This box is <code>calc(100% - var(--gap))</code> wide.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+Here's a simple example defining --section-spacing and applying it as padding to multiple <section> elements:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --section-spacing: 40px;
+    }
+
+    section {
+      padding: var(--section-spacing);
+      background: #f4f4f4;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 8px;
+      font-family: sans-serif;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Section One</h2>
+    <p>This section uses --section-spacing for padding.</p>
+  </section>
+
+  <section>
+    <h2>Section Two</h2>
+    <p>The same spacing is reused with the custom property.</p>
+  </section>
+
+</body>
+</html>

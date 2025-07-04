@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --primary-color: #3498db; /* Default (light) */
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #fdfdfd;
+      color: var(--primary-color);
+      padding: 40px;
+    }
+
+    .dark-theme {
+      --primary-color: #e67e22; /* Override for dark theme */
+      background: #1e1e1e;
+      color: var(--primary-color);
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body class="dark-theme">
+
+  <h1>Custom Property Override</h1>
+  <p>This text uses <code>--primary-color</code>, which is orange in the dark theme.</p>
+
+</body>
+</html>

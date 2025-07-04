@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --font-scale: 1rem;
+    }
+
+    body {
+      font-size: var(--font-scale);
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      :root {
+        --font-scale: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <p>This text scales based on the --font-scale variable, which adjusts on smaller screens.</p>
+
+</body>
+</html>
