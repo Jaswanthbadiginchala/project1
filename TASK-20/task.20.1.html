@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing</title>
+  <style>
+    :root {
+      --bg: #fff; --text: #111; --card: #f0f0f0;
+      --accent: #0077ff; --btn: #0077ff; --btn-text: #fff;
+    }
+    [data-theme="dark"] {
+      --bg: #121212; --text: #eee; --card: #1e1e1e;
+      --accent: #66f; --btn: #4455ff; --btn-text: #fff;
+    }
+    body {
+      margin: 0; font-family: sans-serif;
+      background: var(--bg); color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    .toggle {
+      position: absolute; top: 1rem; right: 1rem;
+      background: var(--accent); color: #fff;
+      border: none; padding: 0.4rem 0.8rem;
+      border-radius: 5px; cursor: pointer;
+    }
+    .pricing {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      justify-content: center; padding: 2rem;
+    }
+    .card {
+      background: var(--card); border-radius: 10px;
+      padding: 1.5rem; width: 280px; text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+    .price { font-size: 1.5rem; color: var(--accent); }
+    form { margin-top: 1rem; }
+    input {
+      padding: 0.4rem; width: 80%; border-radius: 5px;
+      border: 1px solid #ccc; transition: 0.2s;
+    }
+    input:focus {
+      border-color: var(--accent); outline: none;
+    }
+    button.subscribe {
+      margin-top: 0.5rem; padding: 0.4rem 1rem;
+      background: var(--btn); color: var(--btn-text);
+      border: none; border-radius: 5px; cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button.subscribe:hover {
+      background: #005be1;
+      transform: scale(1.05);
+    }
+    button.subscribe:active {
+      transform: scale(0.95);
+    }
+    @media (max-width: 600px) {
+      .card { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle" onclick="toggle()">Theme</button>
+  <div class="pricing">
+    <div class="card">
+      <h2>Free</h2>
+      <p class="price">$0</p>
+      <form>
+        <input type="email" placeholder="Email" required />
+        <button class="subscribe">Join</button>
+      </form>
+    </div>
+    <div class="card">
+      <h2>Standard</h2>
+      <p class="price">$10</p>
+      <form>
+        <input type="email" placeholder="Email" required />
+        <button class="subscribe">Join</button>
+      </form>
+    </div>
+    <div class="card">
+      <h2>Pro</h2>
+      <p class="price">$20</p>
+      <form>
+        <input type="email" placeholder="Email" required />
+        <button class="subscribe">Join</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function toggle() {
+      const theme = document.documentElement.dataset.theme;
+      document.documentElement.dataset.theme = theme === "dark" ? "light" : "dark";
+    }
+  </script>
+</body>
+</html>
