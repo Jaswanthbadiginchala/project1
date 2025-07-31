@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGlass - Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-logo">
+                <h1>EduGlass</h1>
+                <span>Student Management System</span>
+            </div>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="global-search" placeholder="Search students, courses...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="notifications">
+                    <button class="notification-btn">🔔 <span class="notification-count">3</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-content">
+            <ul class="nav-menu">
+                <li class="nav-item active" data-section="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </li>
+                <li class="nav-item" data-section="students">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Students</span>
+                </li>
+                <li class="nav-item" data-section="courses">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Courses</span>
+                </li>
+                <li class="nav-item" data-section="attendance">
+                    <span class="nav-icon">📅</span>
+                    <span class="nav-text">Attendance</span>
+                </li>
+                <li class="nav-item" data-section="performance">
+                    <span class="nav-icon">📈</span>
+                    <span class="nav-text">Performance</span>
+                </li>
+                <li class="nav-item" data-section="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="content-section active">
+            <div class="section-header">
+                <h2>Dashboard Overview</h2>
+                <p>Welcome to your student management dashboard</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <h3 id="total-students">247</h3>
+                        <p>Total Students</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-content">
+                        <h3 id="total-courses">28</h3>
+                        <p>Active Courses</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <h3 id="average-attendance">91%</h3>
+                        <p>Average Attendance</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-content">
+                        <h3 id="average-gpa">3.4</h3>
+                        <p>Average GPA</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="chart-container">
+                    <h3>Performance Analytics</h3>
+                    <div style="position: relative; height: 300px;">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="announcements-panel">
+                    <h3>Recent Announcements</h3>
+                    <div id="announcements-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Students Section -->
+        <section id="students" class="content-section">
+            <div class="section-header">
+                <h2>Student Management</h2>
+                <div class="section-actions">
+                    <button class="btn btn-primary" onclick="openStudentModal()">Add New Student</button>
+                </div>
+            </div>
+            
+            <div class="students-grid" id="students-grid">
+                <!-- Student cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="content-section">
+            <div class="section-header">
+                <h2>Course Management</h2>
+                <div class="section-actions">
+                    <button class="btn btn-primary" onclick="openCourseModal()">Add New Course</button>
+                </div>
+            </div>
+            
+            <div class="courses-grid" id="courses-grid">
+                <!-- Course cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Attendance Section -->
+        <section id="attendance" class="content-section">
+            <div class="section-header">
+                <h2>Attendance Tracking</h2>
+                <div class="attendance-controls">
+                    <input type="date" id="attendance-date" class="form-control">
+                    <button class="btn btn-secondary" onclick="loadAttendance()">Load Attendance</button>
+                </div>
+            </div>
+            
+            <div class="attendance-table-container">
+                <table class="attendance-table" id="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Course</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendance-tbody">
+                        <!-- Attendance rows will be dynamically inserted -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Performance Section -->
+        <section id="performance" class="content-section">
+            <div class="section-header">
+                <h2>Performance Analytics</h2>
+                <p>Comprehensive student performance overview</p>
+            </div>
+            
+            <div class="performance-grid">
+                <div class="chart-container">
+                    <h3>Grade Distribution</h3>
+                    <div style="position: relative; height: 300px;">
+                        <canvas id="gradeChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Attendance Trends</h3>
+                    <div style="position: relative; height: 300px;">
+                        <canvas id="attendanceChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="performance-summary">
+                    <h3>Performance Summary</h3>
+                    <div id="performance-stats"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="content-section">
+            <div class="section-header">
+                <h2>Settings</h2>
+                <p>Manage your system preferences</p>
+            </div>
+            
+            <div class="settings-grid">
+                <div class="settings-card">
+                    <h3>Theme Settings</h3>
+                    <div class="setting-item">
+                        <label>Theme Mode</label>
+                        <select class="form-control" id="theme-selector">
+                            <option value="auto">Auto</option>
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <label>Blur Intensity</label>
+                        <input type="range" class="form-control" id="blur-intensity" min="5" max="20" value="10">
+                    </div>
+                </div>
+                
+                <div class="settings-card">
+                    <h3>Notification Settings</h3>
+                    <div class="setting-item">
+                        <label>Email Notifications</label>
+                        <input type="checkbox" class="form-control" checked>
+                    </div>
+                    <div class="setting-item">
+                        <label>Push Notifications</label>
+                        <input type="checkbox" class="form-control" checked>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Student Modal -->
+    <div class="modal hidden" id="student-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="student-modal-title">Add New Student</h3>
+                <button class="modal-close" onclick="closeStudentModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="student-form">
+                    <div class="form-group">
+                        <label class="form-label">Student ID</label>
+                        <input type="text" class="form-control" id="student-id" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="student-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="student-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="student-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Course</label>
+                        <select class="form-control" id="student-course" required>
+                            <option value="">Select Course</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Biology">Biology</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Enrollment Date</label>
+                        <input type="date" class="form-control" id="student-enrollment-date" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeStudentModal()">Cancel</button>
+                <button type="submit" class="btn btn-primary" form="student-form">Save Student</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Modal -->
+    <div class="modal hidden" id="course-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="course-modal-title">Add New Course</h3>
+                <button class="modal-close" onclick="closeCourseModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="course-form">
+                    <div class="form-group">
+                        <label class="form-label">Course Code</label>
+                        <input type="text" class="form-control" id="course-code" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Course Name</label>
+                        <input type="text" class="form-control" id="course-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Instructor</label>
+                        <input type="text" class="form-control" id="course-instructor" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Credits</label>
+                        <input type="number" class="form-control" id="course-credits" min="1" max="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Duration</label>
+                        <input type="text" class="form-control" id="course-duration" placeholder="e.g., 16 weeks" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Capacity</label>
+                        <input type="number" class="form-control" id="course-capacity" min="1" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeCourseModal()">Cancel</button>
+                <button type="submit" class="btn btn-primary" form="course-form">Save Course</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Results Overlay -->
+    <div class="search-overlay hidden" id="search-overlay">
+        <div class="search-backdrop"></div>
+        <div class="search-results">
+            <div class="search-header">
+                <h3>Search Results</h3>
+                <button class="search-close" onclick="closeSearchOverlay()">×</button>
+            </div>
+            <div class="search-content" id="search-results-content">
+                <!-- Search results will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container">
+        <!-- Toast notifications will be inserted here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
